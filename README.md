@@ -1,6 +1,7 @@
 # 1 Triển khai k8s
 <img width="1586" height="863" alt="image" src="https://github.com/user-attachments/assets/10f45ad2-3da3-4769-aace-593d6e63dbfd" />
 <img width="1561" height="869" alt="image" src="https://github.com/user-attachments/assets/29c06368-413b-47e9-aad9-5b635ad16da2" />
+
 # 2. cài đặt prometheus , grafana, alert (kịch bản cpu >80% trong 1 phút)
 
 <img width="1596" height="1028" alt="image" src="https://github.com/user-attachments/assets/b9355b91-6335-4304-9bed-b1b34f5bf0b3" />
