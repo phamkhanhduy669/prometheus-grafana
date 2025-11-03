@@ -4,9 +4,11 @@
 
 # 2. cài đặt prometheus , grafana, alert (kịch bản cpu >80% trong 1 phút)
 
-<img width="1596" height="1028" alt="image" src="https://github.com/user-attachments/assets/b9355b91-6335-4304-9bed-b1b34f5bf0b3" />
+<img width="1693" height="1008" alt="image" src="https://github.com/user-attachments/assets/00a2dc31-12c2-459f-91d6-708c483569e2" />
 
-![prometheus-warn](https://github.com/user-attachments/assets/f82eb47f-7d96-497c-b625-a2c55fe251f1)
+**Prometheus cảnh báo khi CPU vượt ngưỡng 80% trong 1 phút**
+![Prometheus](https://github.com/user-attachments/assets/f82eb47f-7d96-497c-b625-a2c55fe251f1)
+
 
 **Gửi alert message Http endpoint**
 ![webhook](https://github.com/user-attachments/assets/e6592124-1508-41ca-a7f5-67df083538f8)
