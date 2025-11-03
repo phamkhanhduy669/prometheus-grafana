@@ -1,0 +1,27 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: my-custom-rules
+  namespace: kube-prometheus-stack
+  labels:
+    release: kube-prometheus-stack
+spec:
+  groups:
+  - name: my-custom-alerts.rules
+    rules:
+    - alert: PodHighCpuUsage
+      expr: |
+        (
+          sum(rate(container_cpu_usage_seconds_total{container!~"POD|", pod!=""}[1m])) by (pod, namespace)
+          /
+          sum(kube_pod_container_resource_limits{resource="cpu"}) by (pod, namespace)
+        ) * 100 > 80
+        
+      # Đây là yêu cầu của bạn: > 80% "trong 1 phút"
+      for: 1m
+      
+      labels:
+        severity: warning 
+      annotations:
+        summary: "Pod High CPU Usage ({{ $labels.pod }})"
+        description: "Pod '{{ $labels.pod }}' in namespace '{{ $labels.namespace }}' has been using over 80% of its CPU limit for 1 minute."
